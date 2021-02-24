@@ -1,5 +1,5 @@
 Goal:
-Combining the html from the Server Client Connection Crud lesson with passport,
+Combining the html from the Server Client Connection Crud lesson (https://github.com/ccny-ss-js-dec-2020/class-16_02-23-21/tree/master/server-client-connection-crud/lesson) with passport,
 create an app that will only let you see the dog breed crud html if you're signed in.
 
 1. Everything will happen at the root route '/' in this application.
