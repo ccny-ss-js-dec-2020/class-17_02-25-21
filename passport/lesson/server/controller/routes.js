@@ -82,7 +82,7 @@ module.exports = (app, passport, db) => {
 	app.get('/api/signed-in', (req,res) => {
 		//this req.user object is created through req.login
 		//this here is checking to see if there is a req.user in the req object
-		//console.log(req.user)
+		console.log(req.user)
 		if(req.user){
 			res.json({message: 'signed-in', user_id: req.user.id});
 		}

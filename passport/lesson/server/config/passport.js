@@ -1,4 +1,5 @@
 //modules used for passport
+// exporting this file as a function with parameters of passport and database
 module.exports = (passport, db) => {
   var LocalStrategy = require('passport-local').Strategy;
   var bcrypt = require('bcrypt-nodejs');
@@ -30,9 +31,9 @@ module.exports = (passport, db) => {
   		db.query("SELECT * FROM users WHERE username='" + username + "'", (err, user) => {
   			if(user.length < 1)
   				return done(null, false, {message: 'no user'});
-  	        if (!bcrypt.compareSync(password, user[0].password)){
-  	          return done(null, false, {message: 'incorrect password'});
-  	        }
+        if (!bcrypt.compareSync(password, user[0].password)){
+          return done(null, false, {message: 'incorrect password'});
+        }
   			return done(null, user[0]);
   		});
   	});

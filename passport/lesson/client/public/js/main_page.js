@@ -4,6 +4,7 @@ $(document).ready(function(){
 		method: 'GET',
 		url: '/api/signed-in'
 	}).then(function(res){
+		console.log(res)
 		if(res.message){
 			if(res.message === "signed-in"){
 				var aProfile = $('<a>',{
@@ -30,7 +31,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$(document).on('click', '#main-page-logout-button', function(){		
+	$(document).on('click', '#main-page-logout-button', function(){
 		$.ajax({
 			method: 'DELETE',
 			url: '/api/logout-user'
