@@ -6,9 +6,9 @@ Login Authentication boilerplate using:
 	* Express
 	* Passport
 	* jQuery
-	* Postgres
+	* MySql
 
-# Heroku Details For Node/Postgres
+# Heroku Details For Node/MySql
 
 <h2>Heroku</h2>
 
